@@ -148,7 +148,7 @@ class WP_REST_Term_Search_Handler extends WP_REST_Search_Handler {
 	 *
 	 * @since 0.1.0
 	 *
-	 * @param WP_Post $term Post object.
+	 * @param WP_Term $term Post object.
 	 * @return string REST route relative to the REST base URI, or empty string if unknown.
 	 */
 	protected function detect_rest_item_route( $term ) {
