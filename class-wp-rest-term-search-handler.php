@@ -48,13 +48,11 @@ class WP_REST_Term_Search_Handler extends WP_REST_Search_Handler {
 		$offset = (int) $request['per_page'] * ( (int) $request['page'] - 1 );
 
 		$query_args = array(
-			'taxonomy'            => $taxonomies,
-			'offset'              => $offset,
-			'number'              => (int) $request['per_page'],
-			'orderby'             => 'id',
-			'order'               => 'DESC',
-			'hide_empty'          => false,
-			'fields'              => 'ids',
+			'taxonomy'   => $taxonomies,
+			'offset'     => $offset,
+			'number'     => (int) $request['per_page'],
+			'hide_empty' => false,
+			'fields'     => 'ids',
 		);
 
 		if ( ! empty( $request['search'] ) ) {
